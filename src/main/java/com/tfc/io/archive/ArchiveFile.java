@@ -238,6 +238,9 @@ public class ArchiveFile {
 	}
 	
 	public void write() throws IOException {
+		if (thisFile == null) {
+			throw new IOException("Cannot write zip file to source file if the source file does not exist (the archive was created using a constructor which does not take file as an argument)");
+		}
 		write(thisFile);
 	}
 	
