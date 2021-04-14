@@ -16,10 +16,13 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import static com.tfc.io.GeneralUtils.*;
-import static com.tfc.io.InputUtils.*;
-import static com.tfc.io.OutputUtils.*;
+import static com.tfc.io.GeneralUtils.closeAndFlush;
+import static com.tfc.io.GeneralUtils.flush;
+import static com.tfc.io.InputUtils.readBytes;
+import static com.tfc.io.InputUtils.readWithoutClosing;
+import static com.tfc.io.OutputUtils.create;
 
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class ArchiveFile {
 	private final File thisFile;
 	private final ArrayList<ZipEntry> folders = new ArrayList<>();
@@ -238,9 +241,8 @@ public class ArchiveFile {
 	}
 	
 	public void write() throws IOException {
-		if (thisFile == null) {
+		if (thisFile == null)
 			throw new IOException("Cannot write zip file to source file if the source file does not exist (the archive was created using a constructor which does not take file as an argument)");
-		}
 		write(thisFile);
 	}
 	

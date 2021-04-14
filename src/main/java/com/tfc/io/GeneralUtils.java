@@ -3,6 +3,7 @@ package com.tfc.io;
 import java.io.Closeable;
 import java.io.Flushable;
 
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class GeneralUtils {
 	public static void closeAndFlush(Object closeable) {
 		try {

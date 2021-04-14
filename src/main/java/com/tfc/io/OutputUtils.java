@@ -3,8 +3,10 @@ package com.tfc.io;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.function.Supplier;
-import static com.tfc.io.GeneralUtils.*;
 
+import static com.tfc.io.GeneralUtils.closeAndFlush;
+
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class OutputUtils {
 	public static String readOrCreate(String file, Supplier<String> defaultVal) {
 		try {

@@ -3,6 +3,7 @@ package com.tfc.io;
 import java.io.File;
 import java.util.function.Consumer;
 
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class FileTracker {
 	long lastModified = 0;
 	String file;

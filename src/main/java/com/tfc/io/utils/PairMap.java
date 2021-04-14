@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.BiConsumer;
 
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class PairMap<A, B> {
 	private final ArrayList<Pair<A, B>> pairs = new ArrayList<>();
 	

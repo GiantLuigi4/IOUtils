@@ -2,8 +2,10 @@ package com.tfc.io;
 
 import java.io.*;
 import java.util.Objects;
-import static com.tfc.io.GeneralUtils.*;
 
+import static com.tfc.io.GeneralUtils.closeAndFlush;
+
+@SuppressWarnings({"unused", "unchecked", "RedundantSuppression", "UnusedReturnValue"})
 public class InputUtils {
 	public static String readFromCL(String path) {
 		try {
